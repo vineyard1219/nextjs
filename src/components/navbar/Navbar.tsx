@@ -1,5 +1,11 @@
+'use client'
+
 import Link from 'next/link';
 import React from 'react';
+
+const styles = {
+  navbtn: `py-2 px-3 bg-blue-700 text-white rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 mx-3`
+}
 
 const links = [
   {
@@ -44,6 +50,8 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
+        <button onClick={()=>{console.log("logged out")}}>Logout</button>
+        
       </div>
     </div>
   )

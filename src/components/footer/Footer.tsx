@@ -1,7 +1,12 @@
+'use client'
+
 import React from 'react'
 
-export const Footer = () => {
+const Footer = () => {
+  console.log("hi")
   return (
     <div>@2023</div>
   )
 }
+
+export default Footer
