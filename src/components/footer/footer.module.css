@@ -1,0 +1,11 @@
+.container {
+  @apply h-12 text-sm flex items-center justify-between;
+}
+
+.social {
+  @apply flex items-center space-x-2.5;
+}
+
+.icon {
+  @apply opacity-60 cursor-pointer;
+}

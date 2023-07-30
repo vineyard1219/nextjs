@@ -2,10 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
-
-const styles = {
-  navbtn: `py-2 px-3 bg-blue-700 text-white rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 mx-3`
-}
+import styles from './navbar.module.css';
 
 const links = [
   {
@@ -42,15 +39,17 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div>
-      <Link href="/">Cardano</Link>
-      <div>
+    <div className={styles.container}>
+      <Link href="/" className={styles.logo}>Cardano</Link>
+      <div className={styles.links}>
         {links.map(link=>(
-          <Link key={link.id} href={link.url}>
+          <Link key={link.id} href={link.url} className={styles.link}>
             {link.title}
           </Link>
         ))}
-        <button onClick={()=>{console.log("logged out")}}>Logout</button>
+        <button 
+          className={styles.logout}
+          onClick={()=>{console.log("logged out")}}>Logout</button>
         
       </div>
     </div>

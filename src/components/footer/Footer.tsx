@@ -1,11 +1,13 @@
-'use client'
-
 import React from 'react'
+import styles from './footer.module.css'
 
 const Footer = () => {
-  console.log("hi")
   return (
-    <div>@2023</div>
+    <div className={styles.container}>
+      <div>
+        @2023
+      </div>
+    </div>
   )
 }
 
