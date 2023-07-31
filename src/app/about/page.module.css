@@ -1,3 +1,26 @@
-.container{
-  
+.container {
+}
+
+.imgContainer {
+  @apply w-full h-72 relative;
+}
+
+.img {
+  @apply object-cover filter grayscale;
+}
+
+.imgText {
+  @apply absolute bottom-5 left-5 bg-green-500 py-1 px-2 text-white;
+}
+
+.textContainer {
+  @apply flex gap-24;
+}
+
+.item {
+  @apply flex-1 mt-12 flex flex-col gap-8;
+}
+
+.desc {
+  @apply text-base font-light text-justify;
 }

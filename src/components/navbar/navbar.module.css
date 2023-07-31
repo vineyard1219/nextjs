@@ -13,7 +13,7 @@
 }
 
 .logout {
-  @apply px-1 py-1 border-none bg-green-500 text-white cursor-pointer rounded-md;
+  @apply px-2 py-1 border-none bg-green-500 text-white cursor-pointer rounded-md;
 }
 
 

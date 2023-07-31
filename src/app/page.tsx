@@ -1,11 +1,23 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Hero from 'public/hero.png'
+import Button from '@/components/Button/Button'
 
 export default function Home() {
   return (
-    <div>
-      <Image src='https://images.pexels.com/photos/15131949/pexels-photo-15131949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='' className={styles.img}/>
+    <div className={styles.container}>
+      <div className={styles.item}>
+        <h1 className={styles.title}>
+          Better design for yout digital products.
+        </h1>
+        <p className={styles.desc}>
+          Turning your Idea into Reality. We bring together the teams from the
+          global tech industry.
+        </p>
+        <Button url='/portfolio' text='버튼'/>
+      </div>
+      <div className={styles.item}></div>
+      <Image src={Hero} alt='' className={styles.img}/>
     </div>
   )
 }
