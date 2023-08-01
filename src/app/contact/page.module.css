@@ -2,11 +2,15 @@
 }
 
 .title {
-  @apply text-6xl mb-24 text-center;
+  font-size: 60px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
 .content {
-  @apply flex items-center gap-24;
+  display: flex;
+  align-items: center;
+  gap: 100px;
 }
 
 .imgContainer {
@@ -15,10 +19,18 @@
   position: relative;
 }
 
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .image {
   object-fit: contain;
   /* animation: move 3s infinite ease alternate; */
 }
+
 
 @keyframes move {
   from {
@@ -27,13 +39,6 @@
   to {
     transform: translateY(0px) scale(1.03);
   }
-}
-
-.form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .input,
