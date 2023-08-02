@@ -3,7 +3,7 @@ import styles from './page.module.css'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
-async function getData({id}) { //getData가 데이터 호출하고
+async function getData(id) { //getData가 데이터 호출하고
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     cache: 'no-store'
   })

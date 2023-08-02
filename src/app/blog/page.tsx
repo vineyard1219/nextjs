@@ -11,7 +11,7 @@ async function getData() { //1. getData가 데이터 호출하고
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
- 
+
   return res.json()
 }
 
