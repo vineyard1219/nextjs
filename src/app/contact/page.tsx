@@ -2,6 +2,12 @@ import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import Button from '@/components/Button/Button'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Next Dev Contact Information',
+  description: 'This is Contact page',
+}
 
 const Contact = () => {
   return (
