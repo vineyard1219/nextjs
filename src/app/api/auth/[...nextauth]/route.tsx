@@ -1,15 +1,13 @@
-import { NextApiHandler } from 'next'
-import NextAuth from 'next-auth'
-import Providers from 'next-auth/providers'
+import NextAuth from "next-auth"
+import GoogleProvider from "next-auth/providers/google"
 
-const options = {
+const handler = NextAuth({
   providers: [
-    Providers.GitHub({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET
-    })
-  ]
-}
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+  ],
+})
 
-const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options)
-export default authHandler
+export {handler as GET, handler as POST}
